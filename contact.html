@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Here are the alternative contact details</h2>
+    <a href="mailto:abc@gmail.com">mail your queries here</a>
+    <br>
+    <a href="tel:+91 2653264789">26535689</a>
+
+    <form action="mailto:yougendar120@gmail.com" method="POST" enctype="application/x-www-form-urlencoded"
+    target="_self" autocapitalize="words" autocomplete="off">
+    <!-- autocomplete will tell the browser whether we need to autofill the form or not -->
+    <!-- in this <label/> tag 'for' is for the id we provided and by using this <label/> tag
+    we can extent the functionality of our input -->
+    <fieldset id="your info">
+        <legend>info</legend>
+        <label for="uname">Name:</label>
+        <input type="text" name="sugali" id="uname" required width="10px">
+        <br>
+        <br>
+        <label for="temp">your anger level is:</label>
+        <meter id="temp" min="0" max="100" low="20" high="80" optimum="50" value="60">
+            60%
+        </meter>60%
+        <!-- this meter tag will tells us the known number in terms of range -->
+    </fieldset>
+        <br>
+        <fieldset id="mail and pass">
+            <legend>email id</legend>
+            <!-- legend will contain only one element , it wont contain nested elements -->
+        <label for="email">e-mail:
+        <input type="email" id="email">
+        </label>
+        <br/>
+        <br/>
+        <label for="upass">Password:
+        <input type="password" id="upass" required>
+        </label>
+        <br>
+    </br>
+        <label for="dlist">Your query
+        <input type="text" id="dlist" list="customer query">
+        <!-- here the 'list' attribute will direct towards the data list and in the data list the id
+        will be the list name in input tag -->
+        </label>
+        <datalist id="customer query">
+            <option value="blank page"/>
+            <option value="no response"/>
+            <option value="error"/>
+        </datalist>
+        </fieldset>
+        <br>
+
+        <button type="submit" autofocus formnovalidate formaction="my profile.html" value="submit">
+            <!-- formaction will override the action attribute provided in form -->
+            submit
+        </button>
+    </form>
+</body>
+</html>
